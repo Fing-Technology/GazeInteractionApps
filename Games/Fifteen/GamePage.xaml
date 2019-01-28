@@ -11,7 +11,7 @@
     mc:Ignorable="d" FontFamily="Segoe UI">
 
     <Page.Resources>
-        <Style x:Key="ButtonStyle" TargetType="Button">
+        <Style x:Key="ButtonStyle" TargetType="ButtonBase">
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="VerticalAlignment" Value="Stretch" />
             <Setter Property="Margin" Value="10" />
@@ -35,6 +35,9 @@
             <Button Grid.Column="2" Style="{StaticResource ButtonStyle}" Click="OnExit" Content="&#xe8bb;" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" FontSize="36" Width="100" Height="100" gaze:GazeInput.DwellDuration="00:00:01.5000000"/>
 
             <Button Grid.Column="2" Style="{StaticResource ButtonStyle}"  Content="&#xE769;" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" FontSize="36" Width="100" Height="100" Click="OnPause"/>
+
+            <Button Grid.Column="1" Style="{StaticResource ButtonStyle}"  Content="Hint" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="OnAskForHint" Visibility="Visible"/>
+            <RepeatButton Grid.Column="0" Style="{StaticResource ButtonStyle}"  Content="Move" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="OnMoveHint" Visibility="Visible" Interval="500" FontFamily="Segoe UI"/>
             
             <Button Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonStyle}" Click="OnBack" Content="&#xe72b;" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" FontSize="36" Width="100" Height="100" gaze:GazeInput.DwellDuration="00:00:01.5000000"/>
         </Grid>
